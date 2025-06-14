@@ -66,4 +66,13 @@ const numbers = [1, 2, 3, 4, 5, 6];
 const sumEvenNumbers = arr =>
   arr.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
 
-console.log(sumEvenNumbers(numbers)); 
+//console.log(sumEvenNumbers(numbers)); 
+
+
+//7. Leap Year Checker
+
+const isLeapYear = year =>
+  (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+
+console.log(isLeapYear(2024)); 
+console.log(isLeapYear(2023)); 
