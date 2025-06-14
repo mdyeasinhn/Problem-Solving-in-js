@@ -8,10 +8,10 @@ const people = [
 const filterMalesAndMapNames = (arr) =>
     arr.filter(p => p.gender === "male").map(p => p.name);
 
-console.log(filterMalesAndMapNames(people));
+//onsole.log(filterMalesAndMapNames(people));
 
 
-//Object manipulation
+//2.Object manipulation
 const books = [
     { title: "Book", author: "yeasin", year: 2002 },
     { title: "The Book", author: "enan", year: 2024 },
@@ -19,4 +19,15 @@ const books = [
 
 const getBookTitles = (arr) => arr.map(book => book.title);
 
-console.log(getBookTitles(books)); 
+//console.log(getBookTitles(books)); 
+
+
+//3-->Function Composition
+
+const square = n => n * n;
+const double = n => n * 2;
+const addFive = n => n + 5;
+
+const composedFunction = n => addFive(double(square(n)));
+
+//console.log(composedFunction(3)); 
