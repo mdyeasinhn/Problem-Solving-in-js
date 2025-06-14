@@ -42,3 +42,18 @@ const cars = [
 const sortByYear = (arr) => arr.sort((a, b) => a.year - b.year);
 
 //console.log(sortByYear(cars));
+
+
+//5. Find and Modify
+const peopleList = [
+  { name: "Yeasin", age: 22 },
+  { name: "enan", age: 18 },
+];
+
+const updateAgeByName = (arr, targetName, newAge) => {
+  const person = arr.find(p => p.name === targetName);
+  if (person) person.age = newAge;
+  return arr;
+};
+
+//console.log(updateAgeByName(peopleList, "enan", 23));
